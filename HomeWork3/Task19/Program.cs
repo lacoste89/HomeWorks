@@ -36,17 +36,15 @@ else WriteLine("введенно не пятизначное число");
 //-------------------------------Сложное решение (можно ввести любое число)-----------------//
 int count_digit = a == 0 ? 1 : (int)Math.Log10(Math.Abs(a)) + 1;
 
-bool flag = false;
+bool flag = true;
 int i = 0;
 while(i <= count_digit / 2)
 {
-    if (a % (int)Math.Pow(10, (count_digit - i)) / (int)Math.Pow(10, (count_digit - i - 1)) == a % (int)Math.Pow(10, (i + 1)) / (int)Math.Pow(10, i)){
-        flag = true;
-        i++;
-        continue;
+    if (a % (int)Math.Pow(10, (count_digit - i)) / (int)Math.Pow(10, (count_digit - i - 1)) != a % (int)Math.Pow(10, (i + 1)) / (int)Math.Pow(10, i)){
+        flag = false;
+        break;
     }
-    flag = false;
-    break;
+    i++;
 }
 
 if (flag)

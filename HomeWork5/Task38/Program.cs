@@ -26,5 +26,5 @@ double[] GetArray(int size){
 }
 
 double GetSumMinMax(double[] array){
-    return array.Min() + array.Max();
+    return array.Max() - array.Min();
 }

@@ -9,7 +9,7 @@ using static System.Console;
 Clear();
 
 double[] array = GetArray(5);
-double sumMinMax = GetSumMinMax(array);
+double sumMinMax = GetDifferenceMinMax(array);
 WriteLine($"[{String.Join(", ", array)}] -> {sumMinMax}");
 
 double[] GetArray(int size){
@@ -25,6 +25,6 @@ double[] GetArray(int size){
     return resultArray;
 }
 
-double GetSumMinMax(double[] array){
+double GetDifferenceMinMax(double[] array){
     return array.Max() - array.Min();
 }

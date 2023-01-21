@@ -21,7 +21,7 @@ Write("Введите значения b, k для первой функции �
 string[] parametrs1 = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 Equation eq1 = GetEquation(parametrs1);
 
-Write("Введите значения b, k для первой функции через пробел: ");
+Write("Введите значения b, k для второй функции через пробел: ");
 string[] parametrs2 = ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 Equation eq2 = GetEquation(parametrs2);
 

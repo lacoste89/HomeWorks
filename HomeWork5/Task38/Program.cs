@@ -10,7 +10,7 @@ Clear();
 
 double[] array = GetArray(5);
 double differenceMinMax = GetDifferenceMinMax(array);
-WriteLine($"[{String.Join(", ", array)}] -> {sumMinMax}");
+WriteLine($"[{String.Join(", ", array)}] -> {differenceMinMax}");
 
 double[] GetArray(int size){
     

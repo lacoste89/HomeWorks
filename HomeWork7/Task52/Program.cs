@@ -43,13 +43,15 @@ void PrintMatrix(int[,] inMatrix){
 }
 
 double[] GetMeanArray(int[,]  inMatrix){
-    int size = inMatrix.GetLength(1);
-    double[] result = new double[size];
+    double[] result = new double[inMatrix.GetLength(1)];
     for (int i = 0; i < inMatrix.GetLength(0); i++)
     {   
-        for (int j = 0; j < size; j++)
+        for (int j = 0; j < inMatrix.GetLength(1); j++)
         {
             result[j] += (double)inMatrix[i,j];
+            if(i == inMatrix.GetLength(0) - 1) {
+                result[j] /= inMatrix.GetLength(0);
+            }
         }
         
     }
